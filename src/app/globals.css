@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --background: #ffffff;
@@ -22,5 +23,28 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
+
+/* Prose (Markdown) styling */
+.prose {
+  max-width: 75ch;
+  line-height: 1.75;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  scroll-margin-top: 6rem; /* nice for anchored headings */
+}
+
+.prose pre {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  overflow-x: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .prose pre {
+    background: #1e1e1e;
+  }
 }
