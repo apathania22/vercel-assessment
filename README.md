@@ -32,8 +32,8 @@ Environment Variables
 Set the credentials in your .env.local file:
 
 ```
-BASIC_AUTH_USER=assessment_user
-BASIC_AUTH_PASS=choose-a-strong-password
+ Username: `assessment_user`  
+ Password: `Review2025!`
 ```
 
 Also configure them in Vercel → Project Settings → Environment Variables (Production + Preview).
